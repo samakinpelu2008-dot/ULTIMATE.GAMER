@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+#points {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #ffcc00;
+  color: #000;
+}
+
+.game-container {
+  display: none;
+  padding: 20px;
+}
+
+/* Tic-Tac-Toe */
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  color: #000;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cell.taken { cursor: not-allowed; }
+
+/* Snake & Snakes & Ladders */
+canvas {
+  background: #000;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #fff;
+}
+
+/* Connect 4 */
+#connect4Board {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+.connect-cell {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+}
+.connect-cell.red { background: red; }
+.connect-cell.yellow { background: yellow; }
