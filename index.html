@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Game Hub</h1>
+    <p>Play, win, and earn points!</p>
+    <div id="points">Points: 0</div>
+  </header>
+
+  <main>
+    <div class="card-grid">
+      <div class="card" onclick="showGame('tictactoe')">Tic-Tac-Toe</div>
+      <div class="card" onclick="showGame('snake')">Snake</div>
+      <div class="card" onclick="showGame('snakesladders')">Snakes & Ladders</div>
+      <div class="card" onclick="showGame('connect4')">Connect 4</div>
+    </div>
+
+    <div id="games">
+      <div id="tictactoe" class="game-container"></div>
+      <div id="snake" class="game-container"></div>
+      <div id="snakesladders" class="game-container"></div>
+      <div id="connect4" class="game-container"></div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
